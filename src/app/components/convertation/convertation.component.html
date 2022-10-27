@@ -1,0 +1,69 @@
+<div class="Convertation container">
+  <h2>
+    <u>Конвертер валют</u>
+  </h2>
+  <span>Источник: по среднему банковскому курсу</span>
+  <div class="container input-convert">
+    <div class="input-block">
+      <input
+        type="number"
+        name="input-first-currency"
+        placeholder="Введите первую валюту"
+        value="firstInputValue"
+        [(ngModel)]="firstInputValue"
+        (ngModelChange)="
+          handleFirstInputChange(
+            firstSelectedValue,
+            secondSelectedValue,
+            $event
+          )
+        "
+      />
+      <select
+        name="select-first-currency"
+        [(ngModel)]="firstSelectedValue"
+        (ngModelChange)="
+          handleFirstSelectChange(
+            $event,
+            secondSelectedValue,
+            firstInputValue
+            )"
+        value="firstSelectedValue"
+      >
+        <option *ngFor="let selectOption of selectOptions | keyvalue">
+          {{ selectOption.value }}
+        </option>
+      </select>
+    </div>
+    <div class="input-block">
+      <input
+        type="number"
+        name="input-second-currency"
+        placeholder="Введите вторую валюту"
+        value="{secondInputValue}"
+        [(ngModel)]="secondInputValue"
+        (ngModelChange)="
+          handleSecondInputChange(
+            firstSelectedValue,
+            secondSelectedValue,
+            $event
+          )"
+      />
+      <select
+        name="select-second-currency"
+        [(ngModel)]="secondSelectedValue"
+        value="secondSelectedValue"
+        (ngModelChange)="
+          handleSecondSelectChange(
+            firstSelectedValue,
+            $event,
+            firstInputValue
+            )"
+      >
+        <option *ngFor="let selectOption of selectOptions | keyvalue">
+          {{ selectOption.value }}
+        </option>
+      </select>
+    </div>
+  </div>
+</div>

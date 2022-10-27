@@ -1,0 +1,13 @@
+<div class="Header">
+  <div class="header-content container">
+    <h1>Курс валюты на {{ currencyRates?.date }}</h1>
+    <div class="currency-value-container">
+      <div
+        *ngFor="let item of currencyRates?.rates | keyvalue"
+        class="item-currency"
+      >
+        {{ item.key }} : {{ (1 / item.value).toFixed(2) }}
+      </div>
+    </div>
+  </div>
+</div>
