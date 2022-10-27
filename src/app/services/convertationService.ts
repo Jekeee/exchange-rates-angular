@@ -1,4 +1,4 @@
-import { Injectable, Input } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Convertation } from '../models/convertation';
@@ -9,7 +9,7 @@ import { Convertation } from '../models/convertation';
 export class ConvertationService {
   constructor(private http: HttpClient) {}
 
-  getConvertation(
+  getConvertation (
     currencyFrom: string,
     currencyTo: string,
     value: string

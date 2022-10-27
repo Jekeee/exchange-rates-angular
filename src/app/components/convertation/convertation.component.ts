@@ -1,5 +1,4 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { ConvertationService } from 'src/app/services/convertationService';
 import { CurrencyRate } from '../../models/currency-rate'
 
