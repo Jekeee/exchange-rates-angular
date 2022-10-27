@@ -9,7 +9,7 @@ import { Convertation } from '../models/convertation';
 export class ConvertationService {
   constructor(private http: HttpClient) {}
 
-  getAll(
+  getConvertation(
     currencyFrom: string,
     currencyTo: string,
     value: string

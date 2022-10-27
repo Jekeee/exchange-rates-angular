@@ -35,7 +35,7 @@ export class ConvertationComponent {
         currencyFrom = this.firstSelectedValue
         currencyTo = this.secondSelectedValue
         const value = $event
-        this.convertationService.getAll(currencyFrom,currencyTo,value).subscribe(
+        this.convertationService.getConvertation(currencyFrom,currencyTo,value).subscribe(
           (result: { result: number; })=>{
             this.secondInputValue = result.result?.toFixed(2)      
       }
@@ -50,7 +50,7 @@ export class ConvertationComponent {
     currencyFrom = this.firstSelectedValue
     currencyTo = this.secondSelectedValue
     const value = $event
-    this.convertationService.getAll(currencyFrom,currencyTo,value).subscribe(
+    this.convertationService.getConvertation(currencyFrom,currencyTo,value).subscribe(
       (result: { result: number; })=>{
         this.firstInputValue = result.result?.toFixed(2)      
       }
@@ -62,7 +62,7 @@ export class ConvertationComponent {
     currencyTo = this.secondSelectedValue
     const currencyFrom = $event
     value = this.firstInputValue
-    this.convertationService.getAll(currencyFrom,currencyTo,value).subscribe(
+    this.convertationService.getConvertation(currencyFrom,currencyTo,value).subscribe(
       (result: { result: number; })=>{
         this.secondInputValue = result.result.toFixed(2)      
       }
@@ -74,7 +74,7 @@ export class ConvertationComponent {
     const currencyTo = $event
     currencyFrom = this.firstSelectedValue
     value = this.firstInputValue
-    this.convertationService.getAll(currencyFrom,currencyTo,value).subscribe(
+    this.convertationService.getConvertation(currencyFrom,currencyTo,value).subscribe(
       (result: { result: number; })=>{
         this.secondInputValue = result.result.toFixed(2)      
       }

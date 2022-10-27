@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
 
   currencyRates: CurrencyRate | null;
   ngOnInit(): void {
-    this.currencyRatesService.getAll().subscribe((currencyRates) => {
+    this.currencyRatesService.getCurrencyRate().subscribe((currencyRates) => {
       this.currencyRates = currencyRates;
     });
   }

@@ -15,7 +15,7 @@ export class CurrencyRatesService{
     }
 
 
-    getAll(): Observable<CurrencyRate>{
+    getCurrencyRate(): Observable<CurrencyRate>{
         return this.http.get<CurrencyRate>('https://api.exchangerate.host/latest?symbols=EUR,USD,CAD&base=UAH')
         
     }
