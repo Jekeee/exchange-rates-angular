@@ -46,8 +46,8 @@ export class ConvertationComponent {
     this.secondInputValue = $event
     this.timeout = setTimeout(
       () => {
-    currencyFrom = this.firstSelectedValue
-    currencyTo = this.secondSelectedValue
+    currencyFrom = this.secondSelectedValue
+    currencyTo = this.firstSelectedValue
     const value = $event
     this.convertationService.getConvertation(currencyFrom,currencyTo,value).subscribe(
       (result: { result: number; })=>{
